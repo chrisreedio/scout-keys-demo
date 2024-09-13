@@ -12,9 +12,10 @@ return new class extends Migration
         Schema::create('search_keys', function (Blueprint $table) {
             $table->id();
             $table->uuid()->unique();
-            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->morphs('keyable');
             $table->string('key')->nullable();
+            $table->string('engine');
+            $table->bigInteger('engine_key_id')->nullable();
             $table->text('scoped_key')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->softDeletes();

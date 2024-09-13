@@ -11,6 +11,6 @@ return [
         /**
          * The number of minutes a search key should be valid for.
          */
-        'lifetime' => env('SCOUT_KEY_EXPIRATION', 60 * 12),
+        'lifetime' => (int) env('SCOUT_KEY_EXPIRATION', 60 * 12),
     ],
 ];
