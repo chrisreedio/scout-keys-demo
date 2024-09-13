@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "chrisreedio/filament-scout-keys": "dev-main",
         "chrisreedio/laravel-scout-keys": "dev-main",
         "filament/filament": "^3.0-stable",
         "laravel/framework": "^11.9",
@@ -71,6 +72,10 @@
         {
             "type": "path",
             "url": "../../laravel/laravel-scout-keys"
+        },
+        {
+            "type": "path",
+            "url": "../../filament/filament-scout-keys"
         }
     ]
 }
