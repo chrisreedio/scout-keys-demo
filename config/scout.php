@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Person;
+
 return [
 
     /*
@@ -174,6 +176,19 @@ return [
             'retry_interval_seconds' => env('TYPESENSE_RETRY_INTERVAL_SECONDS', 1),
         ],
         'model-settings' => [
+            Person::class => [
+                'collection-schema' => [
+                    'fields' => [
+                        ['name' => 'id', 'type' => 'string'],
+                        // ['name' => 'unique_id', 'type' => 'string'],
+                        ['name' => 'name' , 'type' => 'string'],
+                        ['name' => 'email', 'type' => 'string'],
+                        ['name' => 'phone', 'type' => 'string'],
+                        ['name' => 'birthday', 'type' => 'string'],
+                        ['name' => 'created_at', 'type' => 'int64'],
+                    ],
+                ],
+            ],
             // User::class => [
             //     'collection-schema' => [
             //         'fields' => [
